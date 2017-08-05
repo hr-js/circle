@@ -21,12 +21,11 @@ module.exports = {
       'node_modules',
       path.resolve('/front/src')
     ],
-    extentions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     contentBase: 'front/bundle',
     inline: true,
-    hot: true,
     historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -34,8 +33,5 @@ module.exports = {
       'Access-Control-Allow-Headers': 'X-Requestd-With, content-type, Authorizations'
     }
   },
-  devtool: 'source-map',
-  plugins: [
-    new webpack.hotModuleReplacementPlugin()
-  ]
+  devtool: 'source-map'
 }
